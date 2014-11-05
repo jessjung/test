@@ -121,6 +121,7 @@ $(document).ready(function(){
       // console.log("clicked");
       if(!itemSelected){
         selectedItem = $(this);
+        $(window).load("./index-original.html");
         e.preventDefault();
         itemSelected = true;
       }
