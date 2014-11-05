@@ -121,7 +121,7 @@ $(document).ready(function(){
       // console.log("clicked");
       if(!itemSelected){
         selectedItem = $(this);
-        $(window).load("./index-original.html");
+        $(window).load("http://jessjung.github.io/test/index-original.html");
         e.preventDefault();
         itemSelected = true;
       }
