@@ -143,20 +143,9 @@ $(document).ready(function(){
       }
     }
   });
-  $( ".nav-item" ).bind({
+  $( ".chapter-link-item" ).bind({
     click: function(e) {
-
-    },
-    mouseenter: function(){
-      // var className = $(this).attr('class');
-      // // console.log(className);
-      // if(className.indexOf("one") > 0) console.log("chapter1 selected");
-      // else if(className.indexOf("two") > 0) console.log("chapter2 selected");
-      // else if(className.indexOf("three") > 0) console.log("chapter3 selected");
-
-    },
-    mouseleave: function(){
-
+      console.log($(this).attr('id'));
     }
   });
 });
@@ -164,7 +153,10 @@ function displayProjectContents(){
 
   $(".tile-wrapper").css("display", "none");
   $(".chapter-wrapper").css("display", "block");
-  $(".control-wrapper").css("z-index", "100");
+  $(".control-wrapper").css({
+    "z-index": "100",
+    "display": "block"
+  });
 
 }
 
