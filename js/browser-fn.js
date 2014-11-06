@@ -108,41 +108,56 @@ $(document).ready(function(){
   $(window).bind('resizeEnd', function () {
     applyContentSize();
     contentDisplayLocation();
+    initTileHeight()
   });
 
   $(window).load(function() {
     determineBrowserType(width, height);
     initDisplayLocation();
+    initTileHeight();
   });
 
-  $( ".item-profile-image" ).bind({
+  $( ".item-profile").bind({
     click: function(e) {
-      // Do something on click
-      // console.log("clicked");
-      if(!itemSelected){
-        selectedItem = $(this);
-        displayProjectContents();
-        e.preventDefault();
-        itemSelected = true;
+        // Do something on click
+        // console.log("clicked");
+        if(!itemSelected){
+          selectedItem = $(this);
+          displayProjectContents();
+          e.preventDefault();
+          itemSelected = true;
+        }
       }
-    },
-    mouseenter: function(){
-      if(focusedItem !== $(this) && !itemSelected){
-        // console.log("mouseentered");
-        focusedItem = $(this);
-        onChangeFocusedItem(focusedItem);
-        //displayTags(focusedItem);
-      }
-    },
-    mouseleave: function(){
-      if(focusedItem !== $(this) && !itemSelected){
-        // console.log("mouseleaved");
-        onChangeFocusedItem(focusedItem);
-        // clearTags();
-        // console.log("itemSelected : "+itemSelected);
-      }
-    }
   });
+
+  // $( ".item-profile-image" ).bind({
+  //   click: function(e) {
+  //     // Do something on click
+  //     // console.log("clicked");
+  //     if(!itemSelected){
+  //       selectedItem = $(this);
+  //       displayProjectContents();
+  //       e.preventDefault();
+  //       itemSelected = true;
+  //     }
+  //   },
+  //   mouseenter: function(){
+  //     if(focusedItem !== $(this) && !itemSelected){
+  //       // console.log("mouseentered");
+  //       focusedItem = $(this);
+  //       onChangeFocusedItem(focusedItem);
+  //       //displayTags(focusedItem);
+  //     }
+  //   },
+  //   mouseleave: function(){
+  //     if(focusedItem !== $(this) && !itemSelected){
+  //       // console.log("mouseleaved");
+  //       onChangeFocusedItem(focusedItem);
+  //       // clearTags();
+  //       // console.log("itemSelected : "+itemSelected);
+  //     }
+  //   }
+  // });
   $( ".chapter-link-item" ).bind({
     click: function(e) {
       console.log($(this).attr('id'));
@@ -157,6 +172,14 @@ function displayProjectContents(){
     "z-index": "100",
     "display": "block"
   });
+
+}
+
+function initTileHeight(){
+
+  var w = $('.item-profile').css('width');
+  $('.item-profile').css('height',w);
+  // console.log(w);
 
 }
 

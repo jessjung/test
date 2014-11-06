@@ -87,10 +87,11 @@ text-transform: uppercase;
   height: 700px;
 }
 
-.tile-wrapper{
+tile-wrapper{
   /*background-color: #fff;*/
   /*margin: 0 50px 50px 50px;*/
   margin-left: 70px;
+  border: 2px solid #cccccc;
 }
 
 .item-profile{
@@ -98,6 +99,8 @@ text-transform: uppercase;
   cursor: hand;
   cursor: pointer;
   background-color: #fff;
+  border-left: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
 }
 .row{
   margin: 0;
@@ -134,11 +137,12 @@ text-transform: uppercase;
   margin: 0 auto;
 }
 
-.chapter-links{
+.chapter-links, .item-links{
   list-style: none;
+  padding: 0;
 }
 
-.chapter-links a{
+.chapter-links a, .item-links a{
   color: #cccccc;
   border-color: #cccccc;
   font-weight: 600;
@@ -165,8 +169,17 @@ text-transform: uppercase;
   display: inline-block;
   padding: 0;
 }
+.item-links li{
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
 
 .chapter-links a:hover{
+  color: #f36368;
+  border-color: #f36368;
+}
+.item-links a:hover{
   color: #f36368;
   border-color: #f36368;
 }
@@ -190,6 +203,28 @@ text-transform: uppercase;
   /*color: #cccccc;*/
   font-weight: 600;
 }
+
+.round-big{
+  /*background: #fff;*/
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: hand;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  padding-left: 2px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  transition: left 200ms ease-in-out;
+  z-index: 2;
+  text-align: center;
+  /*color: #cccccc;*/
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 .menu-lable{
   /*color: #cccccc;*/
   /*text-align: center;*/
@@ -200,6 +235,21 @@ text-transform: uppercase;
   margin-bottom: 25px;
   /*font-size: 17px;*/
   position: relative;
+  cursor: hand;
+  cursor: pointer;
+}
+
+
+.menu-lable-big{
+  /*color: #cccccc;*/
+  /*text-align: center;*/
+  /*float: right;*/
+  line-height: 40px;
+  font-weight: 500;
+  margin-right: 55px;
+  /*margin-bottom: 15px;*/
+  /*font-size: 17px;*/
+  /*position: relative;*/
   cursor: hand;
   cursor: pointer;
 }
@@ -228,4 +278,94 @@ text-transform: uppercase;
 
 .preload, .chapter-wrapper {
   display: none;
+}
+
+#phonebill {
+  background: url(../img/phonebill-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#phonebill:hover {
+  background: url(../img/phonebill-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#serendiffiti {
+  background: url(../img/serendiffiti-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#serendiffiti:hover {
+  background: url(../img/serendiffiti-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#grinch {
+  background: url(../img/grinch-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#grinch:hover {
+  background: url(../img/grinch-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#gogetit {
+  background: url(../img/gogetit-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#gogetit:hover {
+  background: url(../img/gogetit-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#yellowline {
+  background: url(../img/yellowline-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#yellowline:hover {
+  background: url(../img/yellowline-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#weadvanceu {
+  background: url(../img/weadvanceu-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#weadvanceu:hover {
+  background: url(../img/weadvanceu-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#happycircuits {
+  background: url(../img/happycircuit-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#happycircuits:hover {
+  background: url(../img/happycircuit-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#makeawish {
+  background: url(../img/makeawish-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#makeawish:hover {
+  background: url(../img/makeawish-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#mindfulunits {
+  background: url(../img/mindfulunits-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#mindfulunits:hover {
+  background: url(../img/mindfulunits-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#chopsticking {
+  background: url(../img/chopsticking-th-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#chopsticking:hover {
+  background: url(../img/chopsticking-th.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+
+#github {
+  background: url(../img/github-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#linkedin {
+  background: url(../img/linkedin-bw.jpg) 0 0 no-repeat;
+  background-size: 100%;
 }
