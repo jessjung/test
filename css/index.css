@@ -14,7 +14,7 @@ hr {
 }
 
 .text-jumbo {
-  font-size: 400%;
+  font-size: 3em;
   font-weight: 300;
   /*opacity: 0.2;*/
   line-height: 1;
@@ -46,7 +46,8 @@ hr {
   margin-right: 50px;
 }
 .text-desc {
-  font-size: 15px;
+
+  letter-spacing: 0.5px;
   line-height: 1.5;
   text-rendering: optimizelegibility;
 }
@@ -55,10 +56,6 @@ hr {
   display:none;
 }
 
-.emphasized {
-  color: #565a5c;
-  font-weight: 700;
-}
 .row-space-6 {
   margin-bottom: 6em;
 }
@@ -87,12 +84,11 @@ text-transform: uppercase;
   height: 700px;
 }
 
-tile-wrapper{
-  /*background-color: #fff;*/
-  /*margin: 0 50px 50px 50px;*/
+/*tile-wrapper{
+
   margin-left: 70px;
   border: 2px solid #cccccc;
-}
+}*/
 
 .item-profile{
   padding: 1px;
@@ -140,6 +136,7 @@ tile-wrapper{
 .chapter-links, .item-links{
   list-style: none;
   padding: 0;
+  padding-left: 15px;
 }
 
 .chapter-links a, .item-links a{
@@ -148,18 +145,23 @@ tile-wrapper{
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 20px;
-  margin-left: 15px;
+  /*margin-left: 15px;*/
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .project-title{
-  font-weight: 600;
+  color: #565a5c;
+  font-weight: 700;
   letter-spacing: 1px;
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
+}
+.emphasized{
+  color: #565a5c;
+  font-weight: 700;
 }
 
 .control-wrapper a{
@@ -171,7 +173,8 @@ tile-wrapper{
 }
 .item-links li{
   display: inline-block;
-  padding: 0;
+  padding: 0 0 20px 0;
+
   width: 100%;
 }
 
@@ -233,6 +236,7 @@ tile-wrapper{
   font-weight: 500;
   margin-right: 55px;
   margin-bottom: 25px;
+  margin-left: 15px;
   /*font-size: 17px;*/
   position: relative;
   cursor: hand;
@@ -241,15 +245,7 @@ tile-wrapper{
 
 
 .menu-lable-big{
-  /*color: #cccccc;*/
-  /*text-align: center;*/
-  /*float: right;*/
-  line-height: 40px;
-  font-weight: 500;
-  margin-right: 55px;
-  /*margin-bottom: 15px;*/
-  /*font-size: 17px;*/
-  /*position: relative;*/
+  font-weight: 700;
   cursor: hand;
   cursor: pointer;
 }
@@ -270,7 +266,10 @@ tile-wrapper{
   z-index: 3000;
 
 }
-
+.name-tag{
+  cursor: hand;
+  cursor: pointer;
+}
 .personal-info.small {
   width: 12%;
   padding-right: 30px;
@@ -280,11 +279,11 @@ tile-wrapper{
   display: none;
 }
 
-#phonebill {
+#phonebill{
   background: url(../img/phonebill-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#phonebill:hover {
+#phonebill.hover, #phonebill:hover {
   background: url(../img/phonebill-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -292,7 +291,7 @@ tile-wrapper{
   background: url(../img/serendiffiti-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#serendiffiti:hover {
+#serendiffiti.hover, #serendiffiti:hover {
   background: url(../img/serendiffiti-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -300,7 +299,7 @@ tile-wrapper{
   background: url(../img/grinch-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#grinch:hover {
+#grinch.hover, #grinch:hover {
   background: url(../img/grinch-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -308,7 +307,7 @@ tile-wrapper{
   background: url(../img/gogetit-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#gogetit:hover {
+#gogetit.hover, #gogetit:hover {
   background: url(../img/gogetit-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -316,7 +315,7 @@ tile-wrapper{
   background: url(../img/yellowline-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#yellowline:hover {
+#yellowline.hover, #yellowline:hover {
   background: url(../img/yellowline-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -324,7 +323,7 @@ tile-wrapper{
   background: url(../img/weadvanceu-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#weadvanceu:hover {
+#weadvanceu.hover, #weadvanceu:hover {
   background: url(../img/weadvanceu-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -332,7 +331,7 @@ tile-wrapper{
   background: url(../img/happycircuit-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#happycircuits:hover {
+#happycircuits.hover, #happycircuits:hover {
   background: url(../img/happycircuit-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -340,7 +339,7 @@ tile-wrapper{
   background: url(../img/makeawish-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#makeawish:hover {
+#makeawish.hover, #makeawish:hover {
   background: url(../img/makeawish-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -348,7 +347,7 @@ tile-wrapper{
   background: url(../img/mindfulunits-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#mindfulunits:hover {
+#mindfulunits.hover, #mindfulunits:hover {
   background: url(../img/mindfulunits-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
@@ -356,7 +355,7 @@ tile-wrapper{
   background: url(../img/chopsticking-th-bw.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
-#chopsticking:hover {
+#chopsticking.hover, #chopsticking:hover {
   background: url(../img/chopsticking-th.jpg) 0 0 no-repeat;
   background-size: 100%;
 }
