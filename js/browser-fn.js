@@ -107,14 +107,14 @@ $(document).ready(function(){
   });
 
   $(window).bind('resizeEnd', function () {
-    applyContentSize();
+    // applyContentSize();
     contentDisplayLocation();
     initTileHeight()
   });
 
   $(window).load(function() {
-    determineBrowserType(width, height);
-    initDisplayLocation();
+    // determineBrowserType(width, height);
+    // initDisplayLocation();
     initTileHeight();
   });
 
@@ -186,9 +186,6 @@ function displayProjectContents(obj){
 
   var t = obj.attr('id');
 
-  // console.log($(".project-title").text());
-  // $(this).addClass("project-title");
-  // console.log(obj.attr('id'));
   $(".item-links a").each(function() {
     if ($(this).attr('id') == t){
       $(this).children().addClass('emphasized');
@@ -203,48 +200,25 @@ function displayProjectContents(obj){
   $( ".chapter-links a" ).bind({
     click: function(e) {
       var t= parseInt($(this).attr('id'));
-      console.log("t: "+t);
+      var c = currentChapter;
+      console.log("t: "+t+", c:"+c);
 
-
-      if(currentChapter < t) {
-        for(var i = currentChapter; i <= t-currentChapter; i++){
-          $(".chapter-list li").each(function() {
-
-            if($(this).attr('id') == i) {
-              var heightNum = $(this).css("height").indexOf("px");
-              var newNum = $(this).css("height").substring(0, heightNum);
-              console.log(newNum);
-              offsetHeight += parseInt(newNum)                         ;
-            }
-          });
-        }
-        $("html, body").animate({ scrollTop: offsetHeight });
-        var currentHeight = offsetHeight;
-        console.log("offsetHeight: "+ offsetHeight);
-        currentChapter = t;
-        console.log(t);
-        console.log(currentChapter+": go down");
-      }else if(currentChapter > t) {
-        for(var i = t; i < currentChapter-t; i++){
-          $(".chapter-list li").each(function() {
-
-            if($(this).attr('id') == i) {
-              var heightNum = $(this).css("height").indexOf("px");
-              var newNum = $(this).css("height").substring(0, heightNum);
-              console.log(newNum);
-              offsetHeight += parseInt(newNum)                         ;
-            }
-          });
-        }
-        offsetHeight *= -1;
-        $("html, body").animate({ scrollTop: offsetHeight });
-        var currentHeight = offsetHeight;
-        console.log("offsetHeight: "+ offsetHeight);
-        currentChapter = t;
-        console.log(t);
-        console.log(currentChapter+": go down");
+      for(var i = 1 ; i < t ; i++){
+        $(".chapter-list li").each(function() {
+          if(parseInt($(this).attr('id')) === i) {
+            var s = $(this).css("height");
+            var n = s.indexOf("px");
+            s = s.substring(0,n);
+            s = parseInt(s);
+            offsetHeight = offsetHeight+s;
+          }
+        });
       }
-
+      offsetHeight = offsetHeight.toString()+"px";
+      console.log("offsetHeight: "+offsetHeight);
+      $("html, body").animate({ scrollTop: offsetHeight });
+      offsetHeight = 0;
+      currentChapter = t;
     }
   });
 
@@ -287,7 +261,7 @@ function initTileHeight(){
 
 
 
-
+/*
 
 
 function determineBrowserType(w,h){
@@ -569,3 +543,4 @@ function clear(){
       $(this).css("opacity","1");
   });
 }
+*/
