@@ -190,35 +190,18 @@ function displayProjectContents(obj){
     if ($(this).attr('id') == t){
       $(this).children().addClass('emphasized');
       $(".project-title").text($(this).text());
+      checkChapterLocation("1");
     }else{
       $(this).children().removeClass('emphasized');
     }
   });
 
-  var offsetHeight= 0;
-
   $( ".chapter-links a" ).bind({
     click: function(e) {
       var t= parseInt($(this).attr('id'));
       var c = currentChapter;
-      console.log("t: "+t+", c:"+c);
-
-      for(var i = 1 ; i < t ; i++){
-        $(".chapter-list li").each(function() {
-          if(parseInt($(this).attr('id')) === i) {
-            var s = $(this).css("height");
-            var n = s.indexOf("px");
-            s = s.substring(0,n);
-            s = parseInt(s);
-            offsetHeight = offsetHeight+s;
-          }
-        });
-      }
-      offsetHeight = offsetHeight.toString()+"px";
-      console.log("offsetHeight: "+offsetHeight);
-      $("html, body").animate({ scrollTop: offsetHeight });
-      offsetHeight = 0;
-      currentChapter = t;
+      checkChapterLocation(t);
+      // console.log("t: "+t+", c:"+c);
     }
   });
 
@@ -239,7 +222,28 @@ function initTileHeight(){
 
 }
 
+function checkChapterLocation(t){
 
+  var offsetHeight= 0;
+
+  for(var i = 1 ; i < t ; i++){
+    $(".chapter-list li").each(function() {
+      if(parseInt($(this).attr('id')) === i) {
+        var s = $(this).css("height");
+        var n = s.indexOf("px");
+        s = s.substring(0,n);
+        s = parseInt(s);
+        offsetHeight = offsetHeight+s;
+      }
+    });
+  }
+  offsetHeight = offsetHeight.toString()+"px";
+  console.log("offsetHeight: "+offsetHeight);
+  $("html, body").animate({ scrollTop: offsetHeight });
+  offsetHeight = 0;
+  currentChapter = t;
+
+}
 
 
 
