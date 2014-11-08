@@ -126,12 +126,15 @@ text-transform: uppercase;
 .content-detail {
   float:right;
 }
-
+.chapter-list{
+  margin-top: 160px;
+  margin-bottom: 160px;
+}
 .chapter-wrapper{
   border-left: 2px solid #cccccc;
   border-bottom: 2px solid #cccccc;
   height: 700px;
-  margin-top: 130px;
+  /*margin-top: 160px;*/
 }
 
 .control-wrapper{

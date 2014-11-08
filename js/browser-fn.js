@@ -3,11 +3,12 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 var itemSelected = false;
 var isGalleryOn = false;
-var displayCount = 0;
+var currentChapter = 1;
 var focusedItem, selectedItem;
 var originalContentHeight;
 var activeHoverInterval;
 var gallerySize;
+var currentHeight;
 
 var contentData=[
   {
@@ -180,16 +181,11 @@ $(document).ready(function(){
           e.preventDefault();
       }
   });
-
-  $( ".chapter-link-item" ).bind({
-    click: function(e) {
-      console.log($(this).attr('id'));
-    }
-  });
 });
 function displayProjectContents(obj){
 
   var t = obj.attr('id');
+
   // console.log($(".project-title").text());
   // $(this).addClass("project-title");
   // console.log(obj.attr('id'));
@@ -199,6 +195,56 @@ function displayProjectContents(obj){
       $(".project-title").text($(this).text());
     }else{
       $(this).children().removeClass('emphasized');
+    }
+  });
+
+  var offsetHeight= 0;
+
+  $( ".chapter-links a" ).bind({
+    click: function(e) {
+      var t= parseInt($(this).attr('id'));
+      console.log("t: "+t);
+
+
+      if(currentChapter < t) {
+        for(var i = currentChapter; i <= t-currentChapter; i++){
+          $(".chapter-list li").each(function() {
+
+            if($(this).attr('id') == i) {
+              var heightNum = $(this).css("height").indexOf("px");
+              var newNum = $(this).css("height").substring(0, heightNum);
+              console.log(newNum);
+              offsetHeight += parseInt(newNum)                         ;
+            }
+          });
+        }
+        $("html, body").animate({ scrollTop: offsetHeight });
+        var currentHeight = offsetHeight;
+        console.log("offsetHeight: "+ offsetHeight);
+        currentChapter = t;
+        console.log(t);
+        console.log(currentChapter+": go down");
+      }else if(currentChapter > t) {
+        for(var i = t; i < currentChapter-t; i++){
+          $(".chapter-list li").each(function() {
+
+            if($(this).attr('id') == i) {
+              var heightNum = $(this).css("height").indexOf("px");
+              var newNum = $(this).css("height").substring(0, heightNum);
+              console.log(newNum);
+              offsetHeight += parseInt(newNum)                         ;
+            }
+          });
+        }
+        offsetHeight *= -1;
+        $("html, body").animate({ scrollTop: offsetHeight });
+        var currentHeight = offsetHeight;
+        console.log("offsetHeight: "+ offsetHeight);
+        currentChapter = t;
+        console.log(t);
+        console.log(currentChapter+": go down");
+      }
+
     }
   });
 
