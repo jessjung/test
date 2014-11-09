@@ -1,6 +1,6 @@
 body {
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.43;
   color: #565a5c;
   background-color: #f5f5f5;
@@ -90,6 +90,7 @@ text-transform: uppercase;
   border: 2px solid #cccccc;
 }*/
 .tag-list{
+  margin: -1px;
   padding-left: 10px;
   background-color: rgba(0,0,0,0.7);
   opacity: 0;
@@ -130,12 +131,11 @@ text-transform: uppercase;
   margin-top: 160px;
   margin-bottom: 160px;
 }
-.chapter-wrapper{
+/*.chapter-wrapper{
   border-left: 2px solid #cccccc;
   border-bottom: 2px solid #cccccc;
   height: 700px;
-  /*margin-top: 160px;*/
-}
+}*/
 
 .control-wrapper{
   position: fixed;
@@ -202,10 +202,17 @@ text-transform: uppercase;
   color: #f36368;
   border-color: #f36368;
 }
+
+.round.active{
+  color: #fff;
+  background: #565a5c;
+}
+
 .item-links a:hover{
   color: #f36368;
   border-color: #f36368;
 }
+
 
 .round{
   /*background: #fff;*/
@@ -284,6 +291,7 @@ text-transform: uppercase;
   padding-top: 30px;
   position: fixed;
   z-index: 3000;
+  background: #f5f5f5;
 
 }
 .name-tag{
@@ -295,7 +303,7 @@ text-transform: uppercase;
   padding-right: 30px;
 }
 
-.preload, .chapter-wrapper {
+.preload, .chapter-wrapper, .item-control {
   display: none;
 }
 
