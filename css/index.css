@@ -131,11 +131,14 @@ text-transform: uppercase;
   margin-top: 160px;
   margin-bottom: 160px;
 }
-/*.chapter-wrapper{
+.chapter-wrapper{
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border-left: 2px solid #cccccc;
-  border-bottom: 2px solid #cccccc;
-  height: 700px;
-}*/
+  border-bottom: 2px solid #cccccc;  
+  height: 819px;
+
+}
 
 .control-wrapper{
   position: fixed;
@@ -286,8 +289,8 @@ text-transform: uppercase;
 }
 
 .personal-info {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 30px;
   position: fixed;
   z-index: 3000;

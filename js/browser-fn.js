@@ -184,16 +184,19 @@ $(document).ready(function(){
 });
 function displayProjectContents(obj){
 
+  clearContent();
   var t = obj.attr('id');
   // console.log(t);
 
   for(var i = 0; i < contentData.length; i++){
     var c = contentData[i];
     if (c.id === t) {
-      $(".chapter-list").append(
-        $("<li id='1' class='chapter-wrapper'></li>").css("background",'url(./'+c.galleryUrl[0]+')')
-      )
-      console.log(c.galleryUrl[0]);
+      for(var j = 0; j < c.galleryUrl.length; j++){
+        $(".chapter-list").append(
+          $("<li id='"+j+"' class='chapter-wrapper'></li>").css("background",'url(./'+c.galleryUrl[j]+')')
+        )
+      }
+      // console.log(c.galleryUrl[0]);
     }
   }
 
@@ -266,7 +269,10 @@ function determineBrowserType(w,h){
 }
 
 
+function clearContent(){
+  $(".chapter-list").html('');
 
+}
 
 
 
