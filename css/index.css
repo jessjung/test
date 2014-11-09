@@ -1,6 +1,6 @@
 body {
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.43;
   color: #565a5c;
   background-color: #f5f5f5;
@@ -286,8 +286,8 @@ text-transform: uppercase;
 }
 
 .personal-info {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 30px;
   position: fixed;
   z-index: 3000;
