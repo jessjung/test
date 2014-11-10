@@ -184,7 +184,7 @@ $(document).ready(function(){
 });
 function displayProjectContents(obj){
 
-  clearContent();
+  // clearContent();
   var t = obj.attr('id');
   // console.log(t);
 
@@ -193,7 +193,7 @@ function displayProjectContents(obj){
     if (c.id === t) {
       for(var j = 0; j < c.galleryUrl.length; j++){
         $(".chapter-list").append(
-          $("<li id='"+j+"' class='chapter-wrapper'></li>").css("background",'url(./'+c.galleryUrl[j]+')')
+          // $("<li id='"+j+"' class='chapter-wrapper'></li>").css("background",'url(./'+c.galleryUrl[j]+')')
         )
       }
       // console.log(c.galleryUrl[0]);
@@ -221,6 +221,7 @@ function displayProjectContents(obj){
 
   $(".tile-wrapper").css("display", "none");
   $(".chapter-wrapper").css("display", "block");
+  $(".chapter-list").css("display", "block");
   $(".control-wrapper").css({
     "z-index": "100",
     "display": "block"
@@ -273,7 +274,6 @@ function clearContent(){
   $(".chapter-list").html('');
 
 }
-
 
 
 

@@ -15,7 +15,7 @@ hr {
 
 .text-jumbo {
   font-size: 3em;
-  font-weight: 300;
+  font-weight: 500;
   /*opacity: 0.2;*/
   line-height: 1;
 }
@@ -25,7 +25,12 @@ hr {
   opacity: 0.5;
   line-height: 0.7;
 }
-
+.text-list li{
+  margin-bottom: 8px;
+}
+.underline{
+  text-decoration: underline;
+}
 .diagonal  {
   width: 4px;
   background-color: #565a5c;
@@ -55,7 +60,9 @@ hr {
 .text-desc.small {
   display:none;
 }
-
+.space-bar {
+  height: 200px;
+}
 .row-space-6 {
   margin-bottom: 6em;
 }
@@ -71,7 +78,7 @@ text-transform: uppercase;
 
 .debug {
   background-color: red;
-  /*height: 700px;*/
+  height: 700px;
 }
 
 .debug-2{
@@ -84,11 +91,11 @@ text-transform: uppercase;
   height: 700px;
 }
 
-/*tile-wrapper{
-
-  margin-left: 70px;
-  border: 2px solid #cccccc;
-}*/
+.tile-wrapper{
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
 .tag-list{
   margin: -1px;
   padding-left: 10px;
@@ -112,8 +119,8 @@ text-transform: uppercase;
   cursor: hand;
   cursor: pointer;
   background-color: #fff;
-  border-left: 2px solid #cccccc;
-  border-bottom: 2px solid #cccccc;
+  /*border-left: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;*/
 }
 .row{
   margin: 0;
@@ -132,11 +139,15 @@ text-transform: uppercase;
   margin-bottom: 160px;
 }
 .chapter-wrapper{
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border-left: 2px solid #cccccc;
-  border-bottom: 2px solid #cccccc;  
-  height: 819px;
+  display: inline-block;
+  /*background-size: 100% 100%;*/
+  /*background-repeat: no-repeat;*/
+  /*border-left: 2px solid #cccccc;*/
+  border-bottom: 2px solid #cccccc;
+  /*height: 819px;*/
+  /*margin-right: auto;
+  margin-left: auto;*/
+  width: 97%;
 
 }
 
@@ -282,10 +293,10 @@ text-transform: uppercase;
 
 
 .active-chapter{
-  -webkit-box-shadow: -11px 5px 40px 26px rgba(255,255,255,0.3);
+  /*-webkit-box-shadow: -11px 5px 40px 26px rgba(255,255,255,0.3);
   -moz-box-shadow: -11px 5px 40px 26px rgba(255,255,255,0.3);
   box-shadow: -11px 5px 40px 26px rgba(255,255,255,0.3);
-  z-index:300;
+  z-index:300;*/
 }
 
 .personal-info {
@@ -306,7 +317,17 @@ text-transform: uppercase;
   padding-right: 30px;
 }
 
-.preload, .chapter-wrapper, .item-control {
+.main-transperent{
+  padding-left:15%;
+  padding-right:15%;
+}
+
+.center-align{
+  text-align: center;
+  /*font-weight: 500;*/
+}
+
+.preload, .item-control, .chapter-list {
   display: none;
 }
 
