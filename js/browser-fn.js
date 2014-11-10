@@ -184,22 +184,30 @@ $(document).ready(function(){
 });
 function displayProjectContents(obj){
 
-  // clearContent();
+  clearContent();
   var t = obj.attr('id');
   // console.log(t);
 
-  for(var i = 0; i < contentData.length; i++){
-    var c = contentData[i];
-    if (c.id === t) {
-      for(var j = 0; j < c.galleryUrl.length; j++){
-        $(".chapter-list").append(
-          // $("<li id='"+j+"' class='chapter-wrapper'></li>").css("background",'url(./'+c.galleryUrl[j]+')')
-        )
+  if(t === "phonebill") $("#phonebill-c").css("display","block");
+  else if(t === "serendiffiti") $("#serendiffiti-c").css("display","block");
+  else {
+    $("#temp").html("");
+    $("#temp").css('display','block');
+    $(".chapter-control").css('display','none');
+
+    for(var i = 0; i < contentData.length; i++){
+      var c = contentData[i];
+      if (c.id === t) {
+        for(var j = 0; j < c.galleryUrl.length; j++){
+          $("#temp").append(
+            $("<li id='"+j+"' class='chapter-wrapper'><div class='col-md-12'><img src="+c.galleryUrl[j]+" class='img-responsive main-transperent' alt='Responsive image' /></li>")
+          )
+        }
+        // console.log(c.galleryUrl[0]);
       }
-      // console.log(c.galleryUrl[0]);
+    $(".chapter-wrapper").css('height','819px');
     }
   }
-
 
   $(".item-links a").each(function() {
     if ($(this).attr('id') == t){
@@ -221,21 +229,21 @@ function displayProjectContents(obj){
 
   $(".tile-wrapper").css("display", "none");
   $(".chapter-wrapper").css("display", "inline-block");
-  $(".chapter-list").css("display", "block");
+  // $(".chapter-list").css("display", "block");
   $(".control-wrapper").css({
     "z-index": "100",
     "display": "block",
     "opacity": "1"
   });
 
-  $(".control-wrapper").animate({ opacity: "0.3" },5000);
+  $(".control-wrapper").animate({ opacity: "0.3" },3000);
 
   $(".control-wrapper").bind({
     mouseenter: function(e) {
       $(this).css("opacity","1");
     },
     mouseleave: function(e) {
-      $(this).animate({ opacity: "0.3" },1000);
+      $(this).animate({ opacity: "0.3" },500);
     }
 
   })
@@ -284,7 +292,12 @@ function determineBrowserType(w,h){
 
 
 function clearContent(){
-  $(".chapter-list").html('');
+
+  $("html, body").animate({ scrollTop: 0 });
+  $("#phonebill-c").css("display","none");
+  $("#serendiffiti-c").css("display","none");
+  $("#temp").css('display','none');
+  $(".chapter-control").css('display','block');
 
 }
 

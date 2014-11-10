@@ -294,7 +294,7 @@ text-transform: uppercase;
   letter-spacing: 0.5px;
   text-decoration: none;
   padding-top: 10px;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
   vertical-align: center;
   cursor: hand;
   cursor: pointer;
@@ -378,6 +378,10 @@ text-transform: uppercase;
 }
 
 .preload, .item-control, .chapter-list {
+  display: none;
+}
+
+#phonebill-c, #serendiffiti-c {
   display: none;
 }
 
