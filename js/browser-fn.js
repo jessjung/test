@@ -224,8 +224,21 @@ function displayProjectContents(obj){
   $(".chapter-list").css("display", "block");
   $(".control-wrapper").css({
     "z-index": "100",
-    "display": "block"
+    "display": "block",
+    "opacity": "1"
   });
+
+  $(".control-wrapper").animate({ opacity: "0.3" },3000);
+
+  $(".control-wrapper").bind({
+    mouseenter: function(e) {
+      $(this).css("opacity","1");
+    },
+    mouseleave: function(e) {
+      $(this).animate({ opacity: "0.3" },1000);
+    }
+
+  })
 }
 
 
