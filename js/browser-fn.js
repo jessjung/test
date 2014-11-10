@@ -134,7 +134,7 @@ $(document).ready(function(){
         if($(this).attr('id') == t) {
           $(this).addClass("hover");
           // console.log($(this).children());
-          $(this).children().animate({ opacity: "1" },1000);
+          // $(this).children().animate({ opacity: "1" },1000);
         }else{
           $(this).removeClass("hover");
         }
@@ -146,7 +146,7 @@ $(document).ready(function(){
       $(".item-profile").each(function() {
         if($(this).attr('id') == t) {
           $(this).removeClass("hover");
-          $(this).children().animate({ opacity: "0" },300);
+          // $(this).children().animate({ opacity: "0" },300);
         }
       });
       e.preventDefault();
@@ -161,7 +161,7 @@ $(document).ready(function(){
     mouseenter: function(e) {
       // console.log($(this).attr('id'));
       var t = $(this).attr('id');
-      $(this).children().animate({ opacity: "1" },1000);
+      // $(this).children().animate({ opacity: "1" },1000);
       $(".item-links a").each(function() {
         // console.log($(this).attr('id'));
         if($(this).attr('id') == t) $(this).css("color","#f36368");
@@ -171,7 +171,7 @@ $(document).ready(function(){
     },
     mouseleave: function(e) {
       // $(this).css("color","#cccccc");
-      $(this).children().animate({ opacity: "0" },300);
+      // $(this).children().animate({ opacity: "0" },300);
       e.preventDefault();
     },
     click: function(e) {
