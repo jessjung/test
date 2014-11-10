@@ -228,7 +228,7 @@ function displayProjectContents(obj){
     "opacity": "1"
   });
 
-  $(".control-wrapper").animate({ opacity: "0.3" },3000);
+  $(".control-wrapper").animate({ opacity: "0.3" },5000);
 
   $(".control-wrapper").bind({
     mouseenter: function(e) {
