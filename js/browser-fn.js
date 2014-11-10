@@ -220,7 +220,7 @@ function displayProjectContents(obj){
   });
 
   $(".tile-wrapper").css("display", "none");
-  $(".chapter-wrapper").css("display", "block");
+  $(".chapter-wrapper").css("display", "inline-block");
   $(".chapter-list").css("display", "block");
   $(".control-wrapper").css({
     "z-index": "100",
